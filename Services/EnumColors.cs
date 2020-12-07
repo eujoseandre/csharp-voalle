@@ -1,9 +1,9 @@
 using System.ComponentModel;
 
-namespace Cores
+namespace Colors
 {
-
-    public enum EnumCores
+    
+    public enum EnumColors
     {
         [Description("Preto e Branco")]
         PretoEBranco = 1,

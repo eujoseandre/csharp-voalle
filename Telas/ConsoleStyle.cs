@@ -1,44 +1,45 @@
 using System;
-namespace Interface
+namespace Interfaces
 {
 
-    class TelaBase
+    class ConsoleStyle
     {
 
-        public TelaBase()
+        public ConsoleStyle()
         {
 
         }
 
-        public void Principal(string mensagem)
+        public void MainTitle(string message)
         {
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine($"\n\t{ mensagem }\n");
+            Console.WriteLine($"\n\t{ message }\n");
             Console.ResetColor();
         }
-        public void TituloServico(string mensagem)
+        public void ServiceTitle(string message)
         {
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine($"> { mensagem }");
+            Console.WriteLine($"> { message }");
             Console.ResetColor();
         }
-        public void MensagemValida(string mensagem)
+        public void ValidMessage(string message)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"> { mensagem }\n");
+            Console.WriteLine($"> { message }\n");
             Console.ResetColor();
         }
 
-        public void MensagemErro(string mensagem)
+        public void ErrorMessage(string message)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"> { mensagem }\n");
+            Console.WriteLine($"> { message }\n");
             Console.ResetColor();
         }
 
-        public void Entrada(){
+        public void Imput()
+        {
             Console.Write("\n> ");
         }
     }

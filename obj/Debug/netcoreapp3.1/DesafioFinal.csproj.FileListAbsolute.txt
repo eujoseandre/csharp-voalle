@@ -24,3 +24,16 @@ C:\Projetos\DesafioFinalC#\obj\Debug\netcoreapp3.1\DesafioFinal.csproj.CoreCompi
 C:\Projetos\DesafioFinalC#\obj\Debug\netcoreapp3.1\DesafioFinal.dll
 C:\Projetos\DesafioFinalC#\obj\Debug\netcoreapp3.1\DesafioFinal.pdb
 C:\Projetos\DesafioFinalC#\obj\Debug\netcoreapp3.1\DesafioFinal.genruntimeconfig.cache
+C:\wamp64\www\GitHub\csharp-voalle\bin\Debug\netcoreapp3.1\DesafioFinal.exe
+C:\wamp64\www\GitHub\csharp-voalle\bin\Debug\netcoreapp3.1\DesafioFinal.deps.json
+C:\wamp64\www\GitHub\csharp-voalle\bin\Debug\netcoreapp3.1\DesafioFinal.runtimeconfig.json
+C:\wamp64\www\GitHub\csharp-voalle\bin\Debug\netcoreapp3.1\DesafioFinal.runtimeconfig.dev.json
+C:\wamp64\www\GitHub\csharp-voalle\bin\Debug\netcoreapp3.1\DesafioFinal.dll
+C:\wamp64\www\GitHub\csharp-voalle\bin\Debug\netcoreapp3.1\DesafioFinal.pdb
+C:\wamp64\www\GitHub\csharp-voalle\obj\Debug\netcoreapp3.1\DesafioFinal.csprojAssemblyReference.cache
+C:\wamp64\www\GitHub\csharp-voalle\obj\Debug\netcoreapp3.1\DesafioFinal.AssemblyInfoInputs.cache
+C:\wamp64\www\GitHub\csharp-voalle\obj\Debug\netcoreapp3.1\DesafioFinal.AssemblyInfo.cs
+C:\wamp64\www\GitHub\csharp-voalle\obj\Debug\netcoreapp3.1\DesafioFinal.csproj.CoreCompileInputs.cache
+C:\wamp64\www\GitHub\csharp-voalle\obj\Debug\netcoreapp3.1\DesafioFinal.dll
+C:\wamp64\www\GitHub\csharp-voalle\obj\Debug\netcoreapp3.1\DesafioFinal.pdb
+C:\wamp64\www\GitHub\csharp-voalle\obj\Debug\netcoreapp3.1\DesafioFinal.genruntimeconfig.cache

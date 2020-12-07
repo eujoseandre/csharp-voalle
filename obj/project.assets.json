@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\DesafioFinalC#\\DesafioFinal.csproj",
+      "projectUniqueName": "C:\\wamp64\\www\\GitHub\\csharp-voalle\\DesafioFinal.csproj",
       "projectName": "DesafioFinal",
-      "projectPath": "C:\\Projetos\\DesafioFinalC#\\DesafioFinal.csproj",
+      "projectPath": "C:\\wamp64\\www\\GitHub\\csharp-voalle\\DesafioFinal.csproj",
       "packagesPath": "C:\\Users\\josea\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\DesafioFinalC#\\obj\\",
+      "outputPath": "C:\\wamp64\\www\\GitHub\\csharp-voalle\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josea\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,4 +1,4 @@
-﻿using Interface;
+﻿using Interfaces;
 
 namespace DesafioFinal
 {
@@ -6,8 +6,8 @@ namespace DesafioFinal
     {
         static void Main(string[] args)
         {
-            var Tela = new Tela();
-            Tela.Executar();
+            var Screen = new ConsoleInterface();
+            Screen.Start();
         }
     }
 }
