@@ -1,0 +1,15 @@
+	NOTAL FISCAL
+
+DADOS DO CLIENTE:
+Nome..................:  ANDRE
+CPF...................:  123.456.789-01
+
+DADOS DO PEDIDO
+Serviço...............:       Impressão
+Tipo de Tinta.........:        Colorido
+Valor da Coloração....:          R$0,10
+Valor Encadernação....:          R$2,00
+Nº de cópias..........:              34
+Nº de páginas.........:               7
+Nome do Arquivo.......:          gagaga
+TOTAL.................:         R$25,80
