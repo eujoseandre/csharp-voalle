@@ -6,16 +6,14 @@ using Cores;
 
 namespace Interface
 {
-
     class Tela : TelaBase
     {
-
-        public Cliente NovoCliente = new Cliente();
+        public Cliente NovoCliente { get; set; };
         public static int Tentativas = 3;
 
         public Tela()
         {
-
+            NovoCliente = new Cliente();
         }
 
         #region MENU
@@ -70,7 +68,8 @@ namespace Interface
         {
             Console.WriteLine($"Bem-vindo(a) { NovoCliente.Nome.ToUpper() }! Agora você pode fazer seu Pedido :)\n");
 
-            string OpcaoServico = string.Empty;
+            var OpcaoServico = string.Empty;    // Evitar tipagem de variáveis utilizar o "var" e também para variáveis utilizar camelCase e não o PascalCase 
+                                                // não modifiquei a variável para não quebrar o código, mas deveria ser opcaoServico
 
             while (Tentativas > 0)
             {
@@ -78,11 +77,7 @@ namespace Interface
                 Entrada();
                 OpcaoServico = Console.ReadLine();
 
-                if (OpcaoServico.Equals("1") || OpcaoServico.Equals("2"))
-                {
-                    break;
-                }
-                else
+                if (!OpcaoServico.Equals("1") && !OpcaoServico.Equals("2")) // IF retirado não havia motivo para estar ali
                 {
                     MensagemErro("Opção inválida!");
                     Tentativas--;
