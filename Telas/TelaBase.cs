@@ -1,10 +1,8 @@
 using System;
 namespace Interface
 {
-
     class TelaBase
     {
-
         public TelaBase()
         {
 
