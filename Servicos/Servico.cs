@@ -2,19 +2,19 @@ using Cores;
 
 namespace Servicos
 {
-
     class Servico
     {
-
-        public string NomeServico = string.Empty;
+        public string NomeServico { get; set; };
         public EnumCores CodigoCor { get; set; }
         public bool Encardenado { get; set; }
-        public int NumeroCopias = 0;
-        public int NumeroPaginas = 0;
+        public int NumeroCopias { get; set; };
+        public int NumeroPaginas { get; set; };
 
         public Servico()
         {
-
+            NomeServico = String.Empty;
+            NumeroCopias = 0;
+            NumeroPaginas = 0;
         }
 
         public Servico(
@@ -32,7 +32,6 @@ namespace Servicos
 
         public double ValorColoracao()
         {
-
             double ValorColoracao;
 
             if (CodigoCor.ToString().Equals("PretoEBranco"))
