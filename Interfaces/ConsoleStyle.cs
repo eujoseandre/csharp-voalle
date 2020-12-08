@@ -1,4 +1,5 @@
 using System;
+
 namespace Interfaces
 {
 
@@ -12,6 +13,7 @@ namespace Interfaces
 
         public void MainTitle(string message)
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine($"\n\t{ message }\n");
             Console.ResetColor();

@@ -35,27 +35,21 @@ namespace Services
 
             double ColoringPrice;
 
-            if (Coloring.ToString().Equals("PretoEBranco"))
-                ColoringPrice = 0.05;
-            else
-                ColoringPrice = 0.10;
+            if (Coloring.ToString().Equals("PretoEBranco")) ColoringPrice = 0.05;
+            else ColoringPrice = 0.10;
             return ColoringPrice;
         }
         public double ReturnBinding()
         {
-            if (Binding)
-                return 2.0;
-            else
-                return 0.0;
+            if (Binding) return 2.0;
+            else return 0.0;
         }
 
         public double Total()
         {
 
-            if (NumberPages > 1)
-                return ReturnBinding() + (NumberPages * (NumberCopies * ReturnColoringPrice()));
-            else
-                return ReturnBinding() + (NumberCopies * ReturnColoringPrice());
+            if (NumberPages > 1) return ReturnBinding() + (NumberPages * (NumberCopies * ReturnColoringPrice()));
+            else return ReturnBinding() + (NumberCopies * ReturnColoringPrice());
         }
     }
 

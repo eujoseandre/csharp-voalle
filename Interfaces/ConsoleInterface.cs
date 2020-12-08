@@ -10,12 +10,13 @@ namespace Interfaces
     class ConsoleInterface : ConsoleStyle
     {
 
-        public Client NewClient = new Client();
-        public static int Attempts = 3;
+        public Client NewClient;
+        public static int Attempts { get; set; }
 
         public ConsoleInterface()
         {
-
+            Attempts = 3;
+            NewClient = new Client();
         }
 
         public void Start()
@@ -34,7 +35,7 @@ namespace Interfaces
             {
                 try
                 {
-                    Console.WriteLine("Agora o seu CPF");
+                    Console.WriteLine("Agora digite seu CPF");
                     Imput();
                     long Cpf = Int64.Parse(Console.ReadLine());
 
@@ -44,16 +45,17 @@ namespace Interfaces
                     {
                         Attempts = 3;
                         NewClient.Cpf = StringCpf;
-                        ValidMessage("CPF Válido!");
+                        ValidMessage($"Tudo certinho { NewClient.Name.ToUpper() }! Seu cadastro foi realizado.");
                         break;
                     }
-                    else throw new Exception("Quantidade de caracteres inválida.");
+                    else if(StringCpf.Length < 11) throw new Exception("Limite de caracteres menor que o permitido.");
+                    else throw new Exception("Limite de caracteres excedido.");
                 }
 
                 catch (FormatException)
                 {
                     Attempts--;
-                    ErrorMessage("Entrada de dados incorreta!");
+                    ErrorMessage("CPF Inválido!");
                 }
                 catch (Exception ex)
                 {
@@ -69,7 +71,7 @@ namespace Interfaces
         public void Menu()
         {
 
-            Console.WriteLine($"Bem-vindo(a) { NewClient.Name.ToUpper() }! Agora você pode fazer seu Pedido :)\n");
+            Console.WriteLine("Escolha o tipo de serviço\n");
 
             string Option = string.Empty;
 
@@ -79,7 +81,10 @@ namespace Interfaces
                 Imput();
                 Option = Console.ReadLine();
 
-                if (Option.Equals("1") || Option.Equals("2")) break;
+                if (Option.Equals("1") || Option.Equals("2")){
+                    Attempts = 3;
+                    break;
+                }
 
                 else
                 {
@@ -90,16 +95,8 @@ namespace Interfaces
                 }
             }
 
-            if (Option.Equals("1"))
-            {
-                Attempts = 3;
-                Photocopy();
-            }
-            else
-            {
-                Attempts = 3;
-                Printing();
-            }
+            if (Option.Equals("1")) Photocopy();
+            else Printing();
         }
 
         public void Photocopy()
@@ -283,7 +280,7 @@ namespace Interfaces
 
             Console.WriteLine("Nome do Arquivo: ");
             Imput();
-            String FileName = Console.ReadLine();
+            String FileName = Console.ReadLine().Replace(" ", "_");
             Console.WriteLine("");
 
             Attempts = 3;
@@ -330,8 +327,6 @@ namespace Interfaces
         public void Purchase(Service product, string name)
         {
 
-            Console.Clear();
-
             MainTitle("RESUMO DO PEDIDO");
             Console.WriteLine("\nDADOS DO CLIENTE:\n" + NewClient.ReturnClientData());
             Console.WriteLine("\nDADOS DO PEDIDO:");
@@ -344,7 +339,7 @@ namespace Interfaces
             Console.WriteLine("Nome do Arquivo.......: {0, 15}", name);
             Console.WriteLine("TOTAL.................: {0, 15:c}", product.Total());
 
-            using (System.IO.StreamWriter sw = new System.IO.StreamWriter(@"C:\Projetos\DesafioFinalC#\NotaFiscal.txt", true))
+            using (System.IO.StreamWriter sw = new System.IO.StreamWriter($@"C:\wamp64\www\GitHub\csharp-voalle\{ name }.txt", false))
             {
 
                 sw.WriteLine("\tNOTAL FISCAL");
@@ -360,6 +355,7 @@ namespace Interfaces
                 sw.WriteLine("TOTAL.................: {0, 15:c}", product.Total());
                 sw.Close();
             }
+            Process.GetCurrentProcess().Kill();
         }
 
         public void ErrorOverage()
