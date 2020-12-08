@@ -48,7 +48,7 @@ namespace Interfaces
                         ValidMessage($"Tudo certinho { NewClient.Name.ToUpper() }! Seu cadastro foi realizado.");
                         break;
                     }
-                    else if(StringCpf.Length < 11) throw new Exception("Limite de caracteres menor que o permitido.");
+                    else if (StringCpf.Length < 11) throw new Exception("Limite de caracteres menor que o permitido.");
                     else throw new Exception("Limite de caracteres excedido.");
                 }
 
@@ -81,15 +81,16 @@ namespace Interfaces
                 Imput();
                 Option = Console.ReadLine();
 
-                if (Option.Equals("1") || Option.Equals("2")){
+                if (Option.Equals("1") || Option.Equals("2"))
+                {
                     Attempts = 3;
                     break;
                 }
 
                 else
                 {
-                    ErrorMessage("Opção inválida!");
                     Attempts--;
+                    ErrorMessage("Opção inválida!");
 
                     if (Attempts == 0) ErrorOverage();
                 }
@@ -131,8 +132,8 @@ namespace Interfaces
                 }
                 else
                 {
-                    ErrorMessage("Opção inválida!");
                     Attempts--;
+                    ErrorMessage("Opção inválida!");
 
                     if (Attempts == 0) ErrorOverage();
                 }
@@ -172,8 +173,8 @@ namespace Interfaces
                 }
                 else
                 {
-                    ErrorMessage("Opção inválida!");
                     Attempts--;
+                    ErrorMessage("Opção inválida!");
 
                     if (Attempts == 0) ErrorOverage();
                 }
@@ -214,8 +215,8 @@ namespace Interfaces
                 }
                 catch (FormatException)
                 {
-                    ErrorMessage("Entrada de dados incorreta.");
                     Attempts--;
+                    ErrorMessage("Entrada de dados incorreta.");
 
                     if (Attempts == 0) ErrorOverage();
                 }
@@ -315,8 +316,8 @@ namespace Interfaces
                 }
                 else
                 {
-                    ErrorMessage("Opção Inválida!");
                     Attempts--;
+                    ErrorMessage("Opção Inválida!");
 
                     if (Attempts == 0) ErrorOverage();
                 }
@@ -360,7 +361,7 @@ namespace Interfaces
 
         public void ErrorOverage()
         {
-            
+
             Console.Clear();
 
             ServiceTitle("Número de tentativas excedido!");
